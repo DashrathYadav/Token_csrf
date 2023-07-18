@@ -19,7 +19,7 @@ mongoose
   });
 
 const token = "TOKEN_IS_HERE";
-const port = 3000;
+// const port = 3000;
 
 // app.get("/", (req, res) => {
 
@@ -119,6 +119,6 @@ app.get("/",(req,res)=>{
 
 const PORT= process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Example app listening on port ${PORT}`);
   console.log("http://localhost:3000");
 });
