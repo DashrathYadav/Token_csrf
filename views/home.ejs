@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            /* max-width: 600px; */
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .csrf-info {
+            width: 250px;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .corner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .corner a {
+            display: inline-block;
+            color: #fff;
+            font-size: 16px;
+            margin: 5px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .corner a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <a href="/profile"><button> Profile</button></a>
+
+    <div class="content">
+        <div class="csrf-info">
+            <h3>CSRF Information 1</h3>
+            <p>CSRF (Cross-Site Request Forgery) is a security vulnerability that allows an attacker to trick a user's browser into performing undesired actions on a trusted website.</p>
+            <p>To prevent CSRF attacks, it's important to implement countermeasures such as:</p>
+            <ul>
+                <li>Using CSRF tokens</li>
+                <li>Verifying the Referer header</li>
+                <li>Using same-origin policy</li>
+            </ul>
+        </div>
+
+        <div class="csrf-info">
+            <h3>CSRF Information 2</h3>
+            <p>CSRF attacks can lead to severe consequences, such as unauthorized actions, data manipulation, and account compromise.</p>
+            <p>By following secure coding practices and implementing proper CSRF protection, the risk of CSRF attacks can be significantly reduced.</p>
+        </div>
+
+        <div class="csrf-info">
+            <h3>CSRF Information 3</h3>
+            <p>Preventing CSRF attacks involves validating and verifying requests to ensure they are legitimate and originated from trusted sources.</p>
+            <p>Server-side frameworks often provide built-in mechanisms for CSRF protection, which should be utilized.</p>
+        </div>
+    </div>
+
+    <form action="/changemail" method="post">
+        <input type="email" name="Email" id="email" placeholder="New Email" required>
+        <button type="submit">Change Email</button>
+    </form>
+
+    <div class="corner">
+        
+        <a href="/change-password">Change Password</a>
+        <a href="/forgotpassword">Forgot Password</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="#" target="_blank"><img src="path_to_facebook_icon.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="path_to_twitter_icon.png" alt="Twitter"></a>
+        <a href="#" target="_blank"><img src="path_to_instagram_icon.png" alt="Instagram"></a>
+    </div>
+</body>
+</html>

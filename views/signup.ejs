@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Hacking Company - Signup</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #111;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 0 0 20px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            border: none;
+            background-color: #222;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #999;
+        }
+
+        p.error {
+            color: #ff3838;
+            margin: 0 0 20px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            margin-top: 20px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" method="post" action="/signup">
+        <h3>Register Your Email</h3>
+        <input type="email" name="Email" id="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <% if(error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+        <button type="submit" id="signupbtn">Signup</button>
+    </form>
+    <a href="/login">Already have an account? Login</a>
+    <script>
+        // Uncomment the code below to enable form submission with JavaScript
+        
+        /*
+        async function req() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const params = new URLSearchParams({
+                email,
+                password,
+            });
+
+            const data = await fetch('http://localhost:3000/signup', {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: params.toString()
+            });
+
+            console.log("Data received is ", data);
+        }
+
+        const form = document.getElementById("form");
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            await req();
+        });
+        */
+    </script>
+</body>
+</html>
